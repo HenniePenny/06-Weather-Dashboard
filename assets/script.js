@@ -1,6 +1,6 @@
-const searchCity = document.getElementById("submitCity");
+const searchCity = document.getElementById("submitCitySearch");
 //store user input in let city variable
-let cityName = document.getElementById("cityInput");
+const cityName = document.getElementById("cityInput");
 const API_KEY = "1d6a84a28c8d241a890752aa40ebeae2";
 
 //second API call with lat and lon for all the weather data I need.
