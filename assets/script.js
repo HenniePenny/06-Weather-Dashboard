@@ -27,20 +27,32 @@ const getDataWithCoordinates = (lat, lon, cityName) => {
 };
 
 const renderWeather = (renderWeatherData, cityName) => {
-  var dateString = moment.unix(renderWeatherData.date).format("MM/DD/YYYY");
+  let dateString = moment.unix(renderWeatherData.date).format("DD.MM.YYYY");
   $("#displayCityDateIcon").text(`${cityName} ${dateString}`);
   let icon = $("<img>").attr(
     "src",
     `http://openweathermap.org/img/wn/${renderWeatherData.icon}.png`
   );
   $("#displayCityDateIcon").append(icon);
-  $("#wind").text(`wind: ${renderWeatherData.wind}`);
+  $("#temp").text(`Temp: ${renderWeatherData.temp}`);
+  $("#wind").text(`Wind: ${renderWeatherData.wind}`);
+  $("#humidity").text(`Humidity: ${renderWeatherData.humidity}`);
+  $("#uvi").text(`UV Index: ${renderWeatherData.uvindex}`);
 };
 
 const get5DayForecast = (dailyData) => {
   for (let index = 0; index < 5; index++) {
     const element = dailyData[index];
-    $(`#day${index + 1} .humidity`).text(`humidity: ${element.humidity}`);
+    let dateString2 = moment.unix(element.dt).format("DD.MM.YYYY");
+    $(`#day${index + 1} .date`).text(`${dateString2}`);
+    let icon2 = $("<img>").attr(
+      "src",
+      `http://openweathermap.org/img/wn/${element.weather[0].icon}.png`
+    );
+    $(`#day${index + 1} .weatherIcon`).append(icon2);
+    $(`#day${index + 1} .temp`).text(`Temp: ${element.temp.day}`);
+    $(`#day${index + 1} .wind`).text(`Wind: ${element.wind_speed}`);
+    $(`#day${index + 1} .humidity`).text(`Humidity: ${element.humidity}`);
   }
 };
 
