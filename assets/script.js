@@ -8,11 +8,11 @@ const getDataWithCoordinates = (lat, lon, cityName) => {
   const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=1d6a84a28c8d241a890752aa40ebeae2&units=metric`;
   fetch(url)
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       return res.json();
     })
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       const renderWeatherData = {
         date: data.current.dt,
         icon: data.current.weather[0].icon,
@@ -77,11 +77,11 @@ const callApi = (event) => {
     `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=${API_KEY}&units=metric`
   )
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       return res.json();
     })
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       const lat = data.coord.lat;
       const lon = data.coord.lon;
       getDataWithCoordinates(lat, lon, data.name);

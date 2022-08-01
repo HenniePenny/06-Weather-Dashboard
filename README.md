@@ -19,10 +19,21 @@ THEN I am again presented with current and future conditions for that city
 
 ## Screenshot
 
+![Screenshot of weather dashboard](./assets/Screenshot_weather-dashboard.JPG)
+
 ## Particular Challenges
 
 - understanding the API response and using it in the app
 - getting more comfortable with arrays and objects and how to get to the information needed
 - local storage
 
+## Still to do
+
+- local storage
+- dynamically styling the weather forecast
+- better styling for the uv index
+
 ## Links
+
+- [Deployment Link](https://henniepenny.github.io/06-Weather-Dashboard/)
+- [Repository Link](https://github.com/HenniePenny/06-Weather-Dashboard)
