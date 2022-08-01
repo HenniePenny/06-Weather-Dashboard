@@ -11,88 +11,91 @@
     <header>
       <h1>Weather Dashboard</h1>
     </header>
-    <div id="sideBar">
-      <h2>Search for a city:</h2>
-      <div>
-        <form id="submitCity">
-          <input type="text" id="cityInput" placeholder="city" />
-          <button id="submitCitySearch" type="submit">Search</button>
-        </form>
-      </div>
-      <hr />
-      <div id="searchHistory">
-        <button id="searchHistory1" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-        <button id="searchHistory2" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-        <button id="searchHistory3" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-        <button id="searchHistory4" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-        <button id="searchHistory5" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-        <button id="searchHistory6" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-        <button id="searchHistory7" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-        <button id="searchHistory8" class="previousSearch" type="submit">
-          Placeholder
-        </button>
-      </div>
-    </div>
-    <div id="mainDisplay">
-      <div id="weatherToday">
-        <h2 id="displayCityDateIcon"></h2>
-        <div id="temp"></div>
-        <div id="wind"></div>
-        <div id="humidity"></div>
-        <div id="uvi"></div>
-      </div>
-      <div id="forecast5Days">
-        <div id="day1" class="forecast">
-          <div class="date"></div>
-          <div class="weatherIcon"></div>
-          <div class="temp"></div>
-          <div class="wind"></div>
-          <div class="humidity"></div>
+    <main>
+      <div id="sideBar">
+        <h2>Search for a city:</h2>
+        <div>
+          <form id="submitCity">
+            <input type="text" id="cityInput" placeholder="city" />
+            <button id="submitCitySearch" type="submit">Search</button>
+          </form>
         </div>
-        <div id="day2" class="forecast">
-          <div class="date"></div>
-          <div class="weatherIcon"></div>
-          <div class="temp"></div>
-          <div class="wind"></div>
-          <div class="humidity"></div>
-        </div>
-        <div id="day3" class="forecast">
-          <div class="date"></div>
-          <div class="weatherIcon"></div>
-          <div class="temp"></div>
-          <div class="wind"></div>
-          <div class="humidity"></div>
-        </div>
-        <div id="day4" class="forecast">
-          <div class="date"></div>
-          <div class="weatherIcon"></div>
-          <div class="temp"></div>
-          <div class="wind"></div>
-          <div class="humidity"></div>
-        </div>
-        <div id="day5">
-          <div class="date" class="forecast"></div>
-          <div class="weatherIcon"></div>
-          <div class="temp"></div>
-          <div class="wind"></div>
-          <div class="humidity"></div>
+        <hr />
+        <div id="searchHistory">
+          <button id="searchHistory1" class="previousSearch" type="submit">
+            Placeholder
+          </button>
+          <button id="searchHistory2" class="previousSearch" type="submit">
+            Placeholder
+          </button>
+          <button id="searchHistory3" class="previousSearch" type="submit">
+            Placeholder
+          </button>
+          <button id="searchHistory4" class="previousSearch" type="submit">
+            Placeholder
+          </button>
+          <button id="searchHistory5" class="previousSearch" type="submit">
+            Placeholder
+          </button>
+          <button id="searchHistory6" class="previousSearch" type="submit">
+            Placeholder
+          </button>
+          <button id="searchHistory7" class="previousSearch" type="submit">
+            Placeholder
+          </button>
+          <button id="searchHistory8" class="previousSearch" type="submit">
+            Placeholder
+          </button>
         </div>
       </div>
-    </div>
+      <div id="mainDisplay">
+        <div id="weatherToday">
+          <h2 id="displayCityDateIcon"></h2>
+          <div id="temp"></div>
+          <div id="wind"></div>
+          <div id="humidity"></div>
+          <div id="uvi"><span id="uviColor"></span></div>
+        </div>
+        <div id="forecast5Days">
+          <!-- <h3>5-Day Forecast:</h3> -->
+          <div id="day1" class="forecast">
+            <div class="date"></div>
+            <div class="weatherIcon"></div>
+            <div class="temp"></div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+          </div>
+          <div id="day2" class="forecast">
+            <div class="date"></div>
+            <div class="weatherIcon"></div>
+            <div class="temp"></div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+          </div>
+          <div id="day3" class="forecast">
+            <div class="date"></div>
+            <div class="weatherIcon"></div>
+            <div class="temp"></div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+          </div>
+          <div id="day4" class="forecast">
+            <div class="date"></div>
+            <div class="weatherIcon"></div>
+            <div class="temp"></div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+          </div>
+          <div id="day5" class="forecast">
+            <div class="date"></div>
+            <div class="weatherIcon"></div>
+            <div class="temp"></div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
   <script
     src="https://code.jquery.com/jquery-3.6.0.js"

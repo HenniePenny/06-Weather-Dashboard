@@ -34,13 +34,25 @@ const renderWeather = (renderWeatherData, cityName) => {
     `http://openweathermap.org/img/wn/${renderWeatherData.icon}.png`
   );
   $("#displayCityDateIcon").append(icon);
-  $("#temp").text(`Temp: ${renderWeatherData.temp}`);
+  $("#temp").text(`Temp: ${renderWeatherData.temp} °C`);
   $("#wind").text(`Wind: ${renderWeatherData.wind}`);
   $("#humidity").text(`Humidity: ${renderWeatherData.humidity}`);
   $("#uvi").text(`UV Index: ${renderWeatherData.uvindex}`);
+  // $("#uviColor").text(`UV Index: ${renderWeatherData.uvindex}`);
+
+  if (renderWeatherData.uvindex <= 2) {
+    $("#uvi").css({ "background-color": "#4EC20B" });
+    // $("#uvi").text(`UV Index: ${renderWeatherData.uvindex}`);
+  } else if (renderWeatherData.uvindex <= 5) {
+    $("uvi").css({ "background-color": "#FCB72C" });
+  } else {
+    $("#uvi").css({ "background-color": "#DA1906" });
+  }
 };
 
 const get5DayForecast = (dailyData) => {
+  let forecastHeading = $("<h3>").text("5-Day Forecast:");
+  $(`#weatherToday`).append(forecastHeading);
   for (let index = 0; index < 5; index++) {
     const element = dailyData[index];
     let dateString2 = moment.unix(element.dt).format("DD.MM.YYYY");
@@ -50,7 +62,7 @@ const get5DayForecast = (dailyData) => {
       `http://openweathermap.org/img/wn/${element.weather[0].icon}.png`
     );
     $(`#day${index + 1} .weatherIcon`).append(icon2);
-    $(`#day${index + 1} .temp`).text(`Temp: ${element.temp.day}`);
+    $(`#day${index + 1} .temp`).text(`Temp: ${element.temp.day}°C`);
     $(`#day${index + 1} .wind`).text(`Wind: ${element.wind_speed}`);
     $(`#day${index + 1} .humidity`).text(`Humidity: ${element.humidity}`);
   }

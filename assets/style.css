@@ -16,6 +16,10 @@ h1 {
   padding: 5px;
 }
 
+main {
+  display: flex;
+}
+
 #sideBar {
   width: 25%;
   display: flex;
@@ -30,6 +34,25 @@ h1 {
   flex-direction: column;
   flex-wrap: wrap;
   height: 100vh;
+}
+
+#weatherToday {
+  padding: 10px;
+  margin: 20px;
+  line-height: 2;
+}
+
+#forecast5Days {
+  display: flex;
+  flex-direction: row;
+}
+
+.forecast {
+  padding: 10px;
+  margin: 20px;
+  line-height: 2;
+  background-color: #3e3e42;
+  color: #ffffff;
 }
 
 #cityInput {
